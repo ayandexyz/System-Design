@@ -16,3 +16,13 @@
 - **Extensibility:** The design should support plugging in custom formatters, filters, and appenders with minimal code changes.
 - **Maintainability:** The codebase should follow clean, object-oriented design with clear separation of concerns (e.g., logger, formatter, appender).
 - **Ease of Use:** The client-facing API should be simple and intuitive for developers to use (e.g., `logger.info("User logged in");`).
+
+## Core Entities
+
+- **Logger:** The main interface clients use to log messages. Applies log level filtering and dispatches messages to configured appenders.
+- **LogLevel (Enum):** Defines severity levels like `DEBUG`, `INFO`, `WARN`, `ERROR`, and `FATAL`.
+- **LogMessage:** Represents a single log event.
+- **LogAppender (Interface):** Abstraction for output destinations.
+- **LogFormatter:** Defines how log messages are formatted.
+- **AsyncLogProcessor:** Handles asynchronous logging.
+- **LogManager:** Responsible for initializing and managing loggers.
